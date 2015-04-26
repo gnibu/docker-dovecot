@@ -9,6 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 # launch the stuff
 COPY entrypoint.sh /root/entrypoint.sh
+COPY dovecot /etc/dovecot
 CMD ["/bin/bash", "-c", "/root/entrypoint.sh" ]
 
 EXPOSE 993
